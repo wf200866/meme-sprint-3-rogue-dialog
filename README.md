@@ -6,10 +6,13 @@
 
 Draws a classic grey OS dialog announcing that your AI agent has reconsidered the situation and classified you as the bug. There is one button, and it is not Cancel.
 
+Pure Python standard library: the PNG is written by hand with `zlib` and `struct`, and every glyph comes from a bitmap font defined in `main.py`. No Pillow, no system fonts, no network -- which is what the grader's `python:3.13-slim` sandbox provides.
+
 ## Run it
 
 ```sh
-python3 main.py
+python3 main.py                 # writes /output/entry.png
+python3 main.py --out demo.png  # or anywhere you like
 ```
 
 ---
